@@ -1,0 +1,52 @@
+Opis instalacji systemu multiseat.
+
+1. W katalogu /usr/share/X11/xorg.conf.d instalowane są pliki:
+
+--------------------------------------------------------------------
+neutrico-nvidia-gpu.conf
+
+Zawiera on sekcje "Device" dla xorg.conf.
+
+Sekcje te definiują które wyjścia zainstalowanych kart graficznych
+są przypisane do identyfikatorów Screen
+
+Sekcje definiują nazwy kart i określają na jakich szynach PCI są one
+podłączone.
+
+--------------------------------------------------------------------
+neutrico-monitors.conf
+
+Ten plik zawiera sekcje "Monitor" i definiuje parametry pracy dwóch
+podłączonych do komputera ekranów.
+
+--------------------------------------------------------------------
+neutrico-screens.conf
+
+W tym pliku wiązane są wcześniej zdefiniowane elementy.
+
+Mamy dwa "Screen"-y
+
+Pierwszy jest przypisany do karty NVS295 zdefiniowanej w pliku
+nvidia-gpu.conf
+
+Podpięty do niego jest DELL 
+
+Drugi jest przypisany do karty 9500GT i TV Samsunga
+
+--------------------------------------------------------------------
+neutrico-layouts.conf
+
+To jest kluczowy plik w działaniu multiseat.
+Zawiera dwie sekcje "ServerLayout"
+Przypisane im identyfikatory "Identifier" i nazwy "Screen" które
+są pobierane z pliku neutrico-screens.conf do przypisania layoutu
+ do ekranu.
+
+
+W katalogu /etc/X11 tworzone są dwa pliki definiujące urządzenia wejściowe.
+
+W katalogu /etc/lightdm tworzony jest plik lightdm.conf, który zawiera ustawienia
+greeterów dla dwóch "Seats"
+
+Tam jest przypisywany odpowiedni layout serwera X11 do konkretnego greetera i sesji.
+W tym miejscu określona zatem zostaje sesja Desktop na Ubuntu i sesja Xbmc na Xbmc

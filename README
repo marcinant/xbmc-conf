@@ -1,0 +1,51 @@
+Pakiet zawiera konfigurację serwera xorg na maszynie 'neutrico'
+
+Specyfikacja - stan na: 2012.09.18
+
+PSU: Corsair AX850 W 
+CPU: Intel Core i7 930 @ 2.80 GHz
+RAM: Corsair 12 GB
+MB: Asus P6T SE
+
+VGA1: 02:00.0 VGA compatible controller: NVIDIA Corporation G98 [Quadro NVS 295] (rev a1)
+
++ DELL 2408WFP
+
+VGA2: 03:00.0 VGA compatible controller: NVIDIA Corporation G96 [GeForce 9500 GT] (rev a1)
+
++ Samsung TV
+
+HDD1: 
+
+/dev/sde:
+
+ Model=OCZ-VERTEX2, FwRev=1.32, SerialNo=OCZ-T8360SPJF00U04V4
+
+HDD2:
+
+/dev/sdf:
+
+ Model=WDC WD20EARX-00PASB0, FwRev=51.0AB51, SerialNo=WD-WCAZA6666508
+
+HDD3:
+
+/dev/sdg:
+
+ Model=WDC WD20EARX-00PASB0, FwRev=51.0AB51, SerialNo=WD-WCAZA6666576
+
+Nvidia driver:
+
+nvidia-current:
+  Zainstalowana: 295.40-0ubuntu1.1
+
+Peripherials:
+
+Seat 1 + VGA1
+Bus 005 Device 002: ID 17ef:6009 Lenovo ThinkPad Keyboard with TrackPoint
+Bus 002 Device 007: ID 046d:c526 Logitech, Inc. Nano Receiver
+
+Seat 2 + VGA2
+Bus 007 Device 002: ID 046d:c512 Logitech, Inc. LX-700 Cordless Desktop Receiver
+Bus 005 Device 003: ID 0766:0204 Jess-Link Products Co., Ltd TopSpeed Cyberlink Remote Control
+
+
